@@ -6,6 +6,15 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 
+import { CadastroDeUsuarioPage } from '../pages/cadastro-de-usuario/cadastro-de-usuario';
+import { CarrinhoDeComprasPage } from '../pages/carrinho-de-compras/carrinho-de-compras';
+import { ContatoPage } from '../pages/contato/contato';
+import { FeedbackPage } from '../pages/feedback/feedback';
+import { FormasDePagamentoPage } from '../pages/formas-de-pagamento/formas-de-pagamento';
+import { PerfilPage } from '../pages/perfil/perfil';
+import { SobreNosPage } from '../pages/sobre-nos/sobre-nos';
+import { TimelinePage } from '../pages/timeline/timeline';
+
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -18,6 +27,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    CadastroDeUsuarioPage,
+    CarrinhoDeComprasPage,
+    ContatoPage,
+    FeedbackPage,
+    FormasDePagamentoPage,
+    PerfilPage,
+    SobreNosPage,
+    TimelinePage
   ],
   bootstrap: [IonicApp],
   entryComponents: [
