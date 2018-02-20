@@ -22,11 +22,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   declarations: [
     MyApp,
     HomePage,
-    ListPage
-  ],
-  imports: [
-    BrowserModule,
-    IonicModule.forRoot(MyApp),
+    ListPage,
     CadastroDeUsuarioPage,
     CarrinhoDeComprasPage,
     ContatoPage,
@@ -36,11 +32,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SobreNosPage,
     TimelinePage
   ],
+  imports: [
+    BrowserModule,
+    IonicModule.forRoot(MyApp)
+  ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
-    ListPage
+    HomePage
   ],
   providers: [
     StatusBar,
