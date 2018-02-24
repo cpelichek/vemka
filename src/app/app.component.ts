@@ -5,6 +5,13 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import { CadastroDeUsuarioPage } from '../pages/cadastro-de-usuario/cadastro-de-usuario';
+import { CarrinhoDeComprasPage } from '../pages/carrinho-de-compras/carrinho-de-compras';
+import { FeedbackPage } from '../pages/feedback/feedback';
+import { FormasDePagamentoPage } from '../pages/formas-de-pagamento/formas-de-pagamento';
+import { PerfilPage } from '../pages/perfil/perfil';
+import { SobreNosPage } from '../pages/sobre-nos/sobre-nos';
+import { TimelinePage } from '../pages/timeline/timeline';
 
 @Component({
   templateUrl: 'app.html'
@@ -22,9 +29,14 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }
+      { title: 'Cadastro', component: CadastroDeUsuarioPage},
+      { title: 'Carrinho', component: CarrinhoDeComprasPage},
+      { title: 'Feedback', component: FeedbackPage},
+      { title: 'Pagamento', component: FormasDePagamentoPage},
+      { title: 'Perfil', component: PerfilPage},
+      { title: 'Sobre', component: SobreNosPage},
+      { title: 'Linha do tempo', component: TimelinePage}
     ];
-
   }
 
   initializeApp() {
