@@ -18,6 +18,7 @@ import { TimelinePage } from '../pages/timeline/timeline';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { PeopleProvider } from '../providers/people/people';
+import { Geolocation } from '@ionic-native/geolocation';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { PeopleProvider } from '../providers/people/people';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    PeopleProvider
+    PeopleProvider,
+    Geolocation
   ]
 })
 export class AppModule {}

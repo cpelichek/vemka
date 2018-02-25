@@ -11,7 +11,7 @@ import { Events } from 'ionic-angular';
   selector: 'page-perfil',
   templateUrl: 'perfil.html',
 })
-export class PerfilPage {
+export class CadastroDeUsuarioPage{
   //todo: import proper class
   person = <any>{};
   gotLocation = false;
@@ -19,9 +19,9 @@ export class PerfilPage {
   longitude;
   informacao = '';
   loading;
+  
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public People : PeopleProvider, 
-    private camera: Camera, private geolocation: Geolocation, public http: HttpClient, 
+  constructor(public navCtrl: NavController, public navParams: NavParams, public People : PeopleProvider, private geolocation: Geolocation, public http: HttpClient, 
     private alertCtrl: AlertController, public events: Events, public loadingCtrl: LoadingController ) {
 
     this.person.local = <any>{};
@@ -86,7 +86,6 @@ export class PerfilPage {
   }
 
   inserir(){
-    this.person.foto = this.fotoURI;
     this.person.local.lng = this.longitude;
     this.person.local.lat = this.latitude;
 
@@ -100,27 +99,6 @@ export class PerfilPage {
     this.loading.present();
   }
 
-  takeProfilePicture(){
-    const options: CameraOptions = {
-      quality: 100,
-      destinationType: this.camera.DestinationType.DATA_URL,
-      encodingType: this.camera.EncodingType.JPEG,
-      mediaType: this.camera.MediaType.PICTURE,
-      targetWidth: 256
-    }
-
-    this.camera.getPicture(options).then((imageData) => {
-      //img is a file uri
-      this.fotoURI = imageData;
-      this.fotoTirada = true;
-
-     }, (err) => {
-      // Handle error
-      // TODO add error handler
-     });
-
-  
-  }
 
 }
 

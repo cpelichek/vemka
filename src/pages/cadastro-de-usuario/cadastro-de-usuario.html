@@ -51,9 +51,13 @@
         <ion-label color="primary" fixed>e-mail</ion-label>
         <ion-input [(ngModel)]="person.email"></ion-input>
       </ion-item>
-
+    
       <ion-item>
-          <ion-label>Eu aceito os termos de uso.</ion-label>
+          <ion-label>
+            Eu aceito os <button ion-button icon-only (click)="presentPopover($event)"></button>
+            <ion-icon name="termos de uso."></ion-icon>
+          </button>
+          </ion-label>
           <ion-checkbox [(ngModel)]="person.agreementContract" (ionChange)="person.agreementContract"></ion-checkbox>
       </ion-item>
 
