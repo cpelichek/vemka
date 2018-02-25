@@ -14,8 +14,53 @@
     </ion-navbar>
 
 </ion-header>
-
-
 <ion-content padding>
+  <ion-content padding>
+    <h1>
+      Cadastro
+    </h1>
+
+    <ion-list>
+
+      <ion-item>
+        <ion-label color="primary" fixed>Nome</ion-label>
+         <ion-input [(ngModel)]="person.nome"></ion-input>
+      </ion-item>    
+
+      <ion-item>
+        <ion-label color="primary" fixed>Sobrenome</ion-label>
+        <ion-input [(ngModel)]="person.sobrenome"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="primary" fixed>Senha </ion-label>
+        <ion-input [(ngModel)]="person.senha"></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label color="primary" fixed>Repita a senha </ion-label>
+          <ion-input [(ngModel)]="person.senhaRepetida"></ion-input>
+        </ion-item>
+
+      <ion-item>
+        <ion-label color="primary" fixed>Telefone</ion-label>
+        <ion-input [(ngModel)]="person.telefone"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="primary" fixed>e-mail</ion-label>
+        <ion-input [(ngModel)]="person.email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label>Eu aceito os termos de uso.</ion-label>
+          <ion-checkbox [(ngModel)]="person.agreementContract" (ionChange)="person.agreementContract"></ion-checkbox>
+      </ion-item>
+
+    </ion-list>
+
+    <button ion-button (click)="inserir()" block>Cadastrar!</button>
+    {{informacao}}
+  </ion-content>
 
 </ion-content>
